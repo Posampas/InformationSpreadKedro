@@ -2,6 +2,7 @@ import unittest
 from src.informationspread.pipelines.data_processing.nodes import remove_RT
 from src.informationspread.pipelines.data_processing.nodes import join_user_text
 from src.informationspread.pipelines.data_processing.nodes import remove_non_polish_tweets
+from src.informationspread.pipelines.data_processing.nodes import remove_mentions_from_text 
 
 import pandas as pd
 
@@ -106,3 +107,27 @@ class TestRemoveNonPolishTwitts(unittest.TestCase):
             pd.DataFrame({"lang": ["pl", "pl","ang"], "id": [1, 2,3]}))
         self.assertEqual(len(result), 2)
 
+
+class TestRemoveMentionNode(unittest.TestCase):
+    def test_should_import(self):
+        function = remove_mentions_from_text
+        self.assertIsNotNone(function)
+
+    def test_should_accept_data_frame_that_contaion_column_text_and_return_dataframe(self):
+        result = remove_mentions_from_text(pd.DataFrame({"text":["text"]}))
+        self.assertIsNotNone(result)
+        self.assertIsInstance(result, pd.DataFrame)
+
+    def test_should_throw_exception_when_column_text_is_not_preseent(self):
+        
+        with self.assertRaises(RuntimeError) as context:    
+            remove_mentions_from_text(pd.DataFrame({"id" : [1,2]}))
+
+        self.assertTrue(
+            "Column \"text\" has to be present in the input frame" in str(context.exception))
+
+    def test_should_remove_mentions_from_text(self):
+        text = "this is acctual text" 
+        input_frame = pd.DataFrame({"text": ["@username1 @username2 " + text + " @username"]})
+        result = remove_mentions_from_text(input_frame)
+        self.assertEqual(result['text'].iloc[0], text )

@@ -47,6 +47,26 @@ def join_user_text(twitts: pd.DataFrame) -> pd.DataFrame:
 
 
 def remove_non_polish_tweets(twitts:pd.DataFrame)->pd.DataFrame:
+    """ removes twitts that has in lang column diffrent than 'pl'
+    Args:
+        twitts: dataFrame of twitts 
+    Returns:
+        twitts : dataFrame where all twitts are in polish
+    """
     if "lang" not in twitts.columns.to_list():
         raise RuntimeError("Column \"lang\" has to be present in the input frame") 
     return twitts[twitts["lang"] == "pl"]
+
+def remove_mentions_from_text(twitts:pd.DataFrame)->pd.DataFrame:
+    """ from twitt text removes mentions in form @username 
+    Args:
+        twitts: dataFrame of twitts 
+    Returns:
+        twitts : dataFrame where all the twitts text is cleansed from user mentions
+    """
+    
+    if ("text" not in twitts.columns.to_list()):
+        raise RuntimeError("Column \"text\" has to be present in the input frame")
+
+    twitts['text'] =  twitts['text'].str.replace('@[A-Za-z0-9]+', '').str.strip()
+    return twitts

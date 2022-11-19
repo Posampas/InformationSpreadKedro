@@ -1,7 +1,7 @@
 from kedro.pipeline import Pipeline, node
 from kedro.pipeline.modular_pipeline import pipeline
 
-from .nodes import remove_RT, drop_na_text, join_user_text, remove_non_polish_tweets
+from .nodes import remove_RT, drop_na_text, join_user_text, remove_non_polish_tweets, remove_mentions_from_text
 
 def create_pipeline(**kwargs) -> Pipeline:
     return pipeline(
@@ -25,11 +25,18 @@ def create_pipeline(**kwargs) -> Pipeline:
                 name="remove_non_polish_twitts_node",
             ), 
             node(
-                func=join_user_text,
+                func=remove_mentions_from_text,
                 inputs="twitts_only_in_polish",
+                outputs="twitts_with_mentions_removed",
+                name="remove_mentions_from_text_node",
+            ), 
+            node(
+                func=join_user_text,
+                inputs="twitts_with_mentions_removed",
                 outputs="concatianted_timeline",
                 name="concatinate_user_timeline",
             )
+
 
         ],
         namespace="data_processing",
