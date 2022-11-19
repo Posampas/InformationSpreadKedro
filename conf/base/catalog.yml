@@ -50,3 +50,8 @@ twitts:
   type: pandas.CSVDataSet
   filepath: data/01_raw/twitts.csv
   layer: raw
+
+twitts_removed_RT:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/twitts_no_rt.csv
+  layer: raw
