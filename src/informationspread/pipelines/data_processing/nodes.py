@@ -44,3 +44,9 @@ def join_user_text(twitts: pd.DataFrame) -> pd.DataFrame:
 
 
     return  pd.DataFrame({"user_id": unique_users, "text": text})
+
+
+def remove_non_polish_tweets(twitts:pd.DataFrame)->pd.DataFrame:
+    if "lang" not in twitts.columns.to_list():
+        raise RuntimeError("Column \"lang\" has to be present in the input frame") 
+    return twitts[twitts["lang"] == "pl"]
