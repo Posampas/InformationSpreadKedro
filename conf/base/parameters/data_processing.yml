@@ -1,0 +1,7 @@
+
+data_processing:
+  user_mention_reqex: 
+    '@[A-Za-z0-9_]+'
+  twitter_links_reex:
+    'https://t.co/[A-Za-z0-9]+'
+

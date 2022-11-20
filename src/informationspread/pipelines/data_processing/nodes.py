@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 
 def remove_RT(twitts: pd.DataFrame) -> pd.DataFrame:
     """ Removes RT twitts from users timelines
@@ -8,8 +9,7 @@ def remove_RT(twitts: pd.DataFrame) -> pd.DataFrame:
     Returns:
         users_rt_removed: 
     """
-    if ("text" not in twitts.columns.to_list()):
-        raise RuntimeError("Column \"text\" has to be present in the input frame")
+    _throw_if_column_not_present("text",twitts)
     twitts = twitts[~ twitts["text"].str.startswith('RT')]
     
     return twitts
@@ -21,8 +21,7 @@ def drop_na_text(twitts: pd.DataFrame) -> pd.DataFrame:
     Returns:
         twitts : no text na rows: 
     """
-    if ("text" not in twitts.columns.to_list()):
-        raise RuntimeError("Column \"text\" has to be present in the input frame")
+    _throw_if_column_not_present("text",twitts)
     twitts = twitts[twitts["text"].notna()]
     
     return twitts
@@ -34,8 +33,8 @@ def join_user_text(twitts: pd.DataFrame) -> pd.DataFrame:
     Returns:
         twitts : dataFrame where all users twitts text  are concatinated 
     """
-    if "text" not in twitts.columns.to_list() or "user_id" not in twitts.columns.to_list():
-        raise RuntimeError("Column \"text\" and \"user_id\" has to be present in the input frame")
+    _throw_if_column_not_present("text",twitts)
+    _throw_if_column_not_present("user_id",twitts)
     unique_users = twitts["user_id"].unique()
     text = []
     for user in unique_users:
@@ -53,20 +52,38 @@ def remove_non_polish_tweets(twitts:pd.DataFrame)->pd.DataFrame:
     Returns:
         twitts : dataFrame where all twitts are in polish
     """
-    if "lang" not in twitts.columns.to_list():
-        raise RuntimeError("Column \"lang\" has to be present in the input frame") 
+    _throw_if_column_not_present("lang",twitts)
     return twitts[twitts["lang"] == "pl"]
 
-def remove_mentions_from_text(twitts:pd.DataFrame)->pd.DataFrame:
+def remove_regex_from_text(twitts:pd.DataFrame, regex_string : str ) -> pd.DataFrame:
     """ from twitt text removes mentions in form @username 
     Args:
         twitts: dataFrame of twitts 
     Returns:
         twitts : dataFrame where all the twitts text is cleansed from user mentions
     """
-    
-    if ("text" not in twitts.columns.to_list()):
-        raise RuntimeError("Column \"text\" has to be present in the input frame")
+    _throw_if_column_not_present("text",twitts)
 
-    twitts['text'] =  twitts['text'].str.replace('@[A-Za-z0-9]+', '').str.strip()
+    if not regex_string or not isinstance(regex_string , str):
+        raise RuntimeError("Regex must be string and be parsable to regex")
+    
+    regrex_pattern = re.compile(pattern = regex_string, flags = re.UNICODE)
+
+    twitts['text'] =  twitts['text'].str.replace(regrex_pattern, '').str.strip()
     return twitts
+
+def remove_non_ascii_chars(twitts:pd.DataFrame) -> pd.DataFrame:
+    """ created to get rid of emojjis
+    Args:
+        twitts: dataFrame of twitts 
+    Returns:
+        twitts : dataFrame where all the twitts text is cleansed from user mentions
+    """ 
+    _throw_if_column_not_present("text",twitts)
+    twitts['text'] = twitts['text'].str.encode('ascii', 'ignore').str.decode('ascii').str.strip()
+    return twitts
+
+
+def _throw_if_column_not_present(column:str, twitts: pd.DataFrame) -> None:
+    if (column not in twitts.columns.to_list()):
+        raise RuntimeError("Column \"{}\" has to be present in the input frame".format(column)) 

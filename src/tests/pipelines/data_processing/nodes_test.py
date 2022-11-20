@@ -2,7 +2,8 @@ import unittest
 from src.informationspread.pipelines.data_processing.nodes import remove_RT
 from src.informationspread.pipelines.data_processing.nodes import join_user_text
 from src.informationspread.pipelines.data_processing.nodes import remove_non_polish_tweets
-from src.informationspread.pipelines.data_processing.nodes import remove_mentions_from_text 
+from src.informationspread.pipelines.data_processing.nodes import remove_regex_from_text 
+from src.informationspread.pipelines.data_processing.nodes import remove_non_ascii_chars 
 
 import pandas as pd
 
@@ -68,10 +69,14 @@ class TestTextJoiningNode(unittest.TestCase):
     def test_should_throw_expection_when_no_column_user_id_and_text(self):
         with self.assertRaises(RuntimeError) as context:
             join_user_text(pd.DataFrame({"lang": ["pl"]}))
-        self.assertTrue("Column \"text\" and \"user_id\" has to be present in the input frame" in str(
+        self.assertTrue("Column \"text\" has to be present in the input frame" in str(
             context.exception))
-
+        with self.assertRaises(RuntimeError) as context:
+            join_user_text(pd.DataFrame({"lang": ["pl"], "text":["dfa"]}))
+        self.assertTrue("Column \"user_id\" has to be present in the input frame" in str(
+            context.exception))
         join_user_text(self.minimal_allowed)
+
 
 
 class TestRemoveNonPolishTwitts(unittest.TestCase):
@@ -108,26 +113,49 @@ class TestRemoveNonPolishTwitts(unittest.TestCase):
         self.assertEqual(len(result), 2)
 
 
-class TestRemoveMentionNode(unittest.TestCase):
+class TestRemoveReqexNode(unittest.TestCase):
     def test_should_import(self):
-        function = remove_mentions_from_text
+        function = remove_regex_from_text
         self.assertIsNotNone(function)
 
-    def test_should_accept_data_frame_that_contaion_column_text_and_return_dataframe(self):
-        result = remove_mentions_from_text(pd.DataFrame({"text":["text"]}))
+    def test_should_accept_data_frame_that_contaion_column_text_and_string_regex_and_return_dataframe(self):
+        result = remove_regex_from_text(pd.DataFrame({"text":["text"]}), "regex")
         self.assertIsNotNone(result)
         self.assertIsInstance(result, pd.DataFrame)
 
     def test_should_throw_exception_when_column_text_is_not_preseent(self):
         
         with self.assertRaises(RuntimeError) as context:    
-            remove_mentions_from_text(pd.DataFrame({"id" : [1,2]}))
+            remove_regex_from_text(pd.DataFrame({"id" : [1,2]}), "regex")
 
         self.assertTrue(
             "Column \"text\" has to be present in the input frame" in str(context.exception))
 
-    def test_should_remove_mentions_from_text(self):
+    def test_should_remove_regex_from_text(self):
         text = "this is acctual text" 
-        input_frame = pd.DataFrame({"text": ["@username1 @username2 " + text + " @username"]})
-        result = remove_mentions_from_text(input_frame)
+        input_frame = pd.DataFrame({"text": ["@username1 @username2 " + text + " @usernam_e"]})
+        result = remove_regex_from_text(input_frame , "@[A-Za-z0-9_]+")
         self.assertEqual(result['text'].iloc[0], text )
+    
+    def test_should_remove_links_form_text(self):
+        regex = 'https://t.co/[A-Za-z0-9]+'
+        text = "this is acctual text"         
+        input_frame = pd.DataFrame({"text": ["https://t.co/XpfTeqxger " + text + " https://t.co/XSGlvprEb9"]})
+        result = remove_regex_from_text(input_frame , regex)
+        print(result['text'].iloc[0])
+        self.assertEqual(result['text'].iloc[0], text )
+
+    def test_should_throw_exception_when_regex_is_not_string(self):
+        with self.assertRaises(RuntimeError) as context:
+            remove_regex_from_text(pd.DataFrame({"text":["1"]}), 1)
+
+        self.assertTrue(
+            "Regex must be string and be parsable to regex")
+
+class TestRemoveNonAsciChar(unittest.TestCase):
+    
+    def test_remove_non_asci_char(self):
+        expected_text = "acctual_text"
+        input_frame = pd.DataFrame({"text" : [" 😂🙂{}🤦💪".format(expected_text)]})
+        result = remove_non_ascii_chars(input_frame)
+        self.assertEqual(result['text'].iloc[0], expected_text ) 
