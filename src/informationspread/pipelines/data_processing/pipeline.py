@@ -26,8 +26,8 @@ def create_pipeline(**kwargs) -> Pipeline:
                 name="remove_non_polish_twitts_node",
             ),
             node(
-                func=remove_non_ascii_chars,
-                inputs=["twitts_only_in_polish"],
+                func=remove_regex_from_text,
+                inputs=["twitts_only_in_polish","params:emojji_regex"],
                 outputs="twitts_asci_chars",
                 name="remove_not_asci_chars_node",
             ),
@@ -53,5 +53,4 @@ def create_pipeline(**kwargs) -> Pipeline:
         namespace="data_processing",
         inputs=["twitts"],
         outputs="cleaned_data",
-
     )
