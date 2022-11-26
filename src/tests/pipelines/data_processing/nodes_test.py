@@ -169,3 +169,4 @@ class TestRemoveNonAsciChar(unittest.TestCase):
         input_frame = pd.DataFrame({"text": [" 😂🙂{}🤦💪".format(expected_text)]})
         result = remove_non_ascii_chars(input_frame)
         self.assertEqual(result['text'].iloc[0], expected_text)
+
