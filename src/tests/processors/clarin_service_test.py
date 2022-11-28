@@ -25,12 +25,6 @@ class TestClarinService(TestCase):
         self.assertIsNotNone(service)
         self.assertEqual(text, service.text)
 
-    def test_run_function_shoud_return_string(self):
-        text = "Text"
-        service = ClarinService(text)
-        result = service.run()
-        self.assertIsInstance(result, str)
-
     # @mock.patch('lpmn_client.upload_file', side_effect=mocked_uploadfile)
     # @mock.patch('lpmn_client.download_file' , side_effect=mocked_download_file)
     # def test_should_call_uplad_file_with_path_to_created_tmp_file_with_tweet_text(self, mock, dowload):
@@ -66,7 +60,7 @@ class TestClarinService(TestCase):
         service = ClarinService("dd")
         text = "This is test. String text"
         expected = ["This is test.","String text"]
-        min_len= 10
+        min_len= 15
         result = service._divide_text_into_chunks(text, min_len)
         print(result)
         self.assertEqual(2, len(result))
@@ -88,5 +82,4 @@ class TestClarinService(TestCase):
         min_len = 15 
         result = service._divide_text_into_chunks(text, min_len)
         # self.assertEqual(3, len(result))
-        self.assertListEqual(expected, result)         
-        
+        self.assertListEqual(expected, result)     

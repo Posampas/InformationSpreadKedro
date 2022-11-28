@@ -6,20 +6,19 @@ import zipfile
 
 class ClarinService:
 
-    def __init__(self, text: str) -> None:
+    def __init__(self, text: str, lmpn = 'any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|ccl_emo({"lang":"polish"})') -> None:
         self.text = text
-        self.lmpn='any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|ccl_emo({"lang":"polish"})'
-    
+        self.lmpn = lmpn
+
     def run(self):
         chunks = self._divide_text_into_chunks(self.text)
         responses  = []
         for chunk in chunks:
            responses.append(self._send(chunk)) 
-        
         return responses
 
 
-    def _divide_text_into_chunks(self,text:str, min_len:int = 30):
+    def _divide_text_into_chunks(self,text:str, min_len:int = 500):
         chunks = []
         tmp = text
         while(tmp):
@@ -51,6 +50,7 @@ class ClarinService:
         f.write(text)
 
     def _send_file_to_clarin(self, path_to_file, target_dir):
+        print(self.lmpn)
         task = Task(lpmn=self.lmpn)
         file_id = lpmn_client.upload_file(path_to_file)
         output_file_id = task.run(file_id)
@@ -63,5 +63,6 @@ class ClarinService:
         un_ziped_path = open(os.path.join(outputdir,[file_name for file_name in os.listdir(outputdir) if 'zip' not in file_name][0]), mode='r')
         return ''.join(un_ziped_path.readlines())
 
-c = ClarinService("To jest Warszawa i Kraków. A to jest Brześć.")
-print(c.run())
+if __name__ == "__main__":
+    c = ClarinService("Warszawa;Kraków;Brześć;", lmpn='any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|geolocation({"limit":2})')
+    print(c.run())
