@@ -48,7 +48,8 @@ def create_pipeline(**kwargs) -> Pipeline:
                 inputs="twitts_with_links_removed",
                 outputs="cleaned_data",
                 name="concatinate_user_timeline",
-            )
+            ),
+            
         ],
         namespace="data_processing",
         inputs=["twitts"],

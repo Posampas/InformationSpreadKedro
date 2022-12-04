@@ -4,8 +4,13 @@ from src.informationspread.pipelines.data_processing.nodes import join_user_text
 from src.informationspread.pipelines.data_processing.nodes import remove_non_polish_tweets
 from src.informationspread.pipelines.data_processing.nodes import remove_regex_from_text
 from src.informationspread.pipelines.data_processing.nodes import remove_non_ascii_chars
-
+from src.informationspread.pipelines.data_processing.nodes import convet_text_to_base_form
 import pandas as pd
+
+
+from src.informationspread.processors.clarinService import ClarinService
+from src.informationspread.processors.xml_parser import XmlParser 
+from unittest import mock
 
 test_frame = pd.DataFrame({id: ["1", "2", "3", "4"], "text": [
                           "RT text", "text", "text", "RT text"]})
@@ -147,7 +152,7 @@ class TestRemoveReqexNode(unittest.TestCase):
         self.assertEqual(result['text'].iloc[0], text)
 
     def test_should_remove_emojjis(self):
-        regex ="([\U0001F1E0-\U0001F1FF]|[\U0001F300-\U0001F5FF]|[\U0001F600-\U0001F64F]|[\U0001F680-\U0001F6FF]|[\U0001F700-\U0001F77F]|[\U0001F780-\U0001F7FF]|[\U0001F800-\U0001F8FF]|[\U0001F900-\U0001F9FF]|[\U0001FA00-\U0001FA6F]|[\U0001FA70-\U0001FAFF]|[\U00002702-\U000027B0]|[\U000024C2-\U0001F251])" 
+        regex = "([\U0001F1E0-\U0001F1FF]|[\U0001F300-\U0001F5FF]|[\U0001F600-\U0001F64F]|[\U0001F680-\U0001F6FF]|[\U0001F700-\U0001F77F]|[\U0001F780-\U0001F7FF]|[\U0001F800-\U0001F8FF]|[\U0001F900-\U0001F9FF]|[\U0001FA00-\U0001FA6F]|[\U0001FA70-\U0001FAFF]|[\U00002702-\U000027B0]|[\U000024C2-\U0001F251])"
         text = "this is acctual text"
         input_frame = pd.DataFrame({"text": [" 😂🙂{}🤦💪".format(text)]})
         result = remove_regex_from_text(input_frame, regex)
@@ -170,3 +175,54 @@ class TestRemoveNonAsciChar(unittest.TestCase):
         result = remove_non_ascii_chars(input_frame)
         self.assertEqual(result['text'].iloc[0], expected_text)
 
+
+def mocked_clarinServiceRun(*args, **kwargs):
+    return ["<xml></xml>","<xml></xml>"]
+def mocked_xml_parser(*args, **kwagrs):
+    return "Warszawa"
+
+class TestConvertToBaseFormUnsingClarinService(unittest.TestCase):
+
+    def setUp(self) -> None:
+        self.input = pd.DataFrame({"id": [1, 2], "text": ["Jest dobrze Warszawa", "Jest źle"]})
+
+    def test_should_import_function(self):
+        func = convet_text_to_base_form
+        self.assertIsNotNone(func)
+
+    def test_should_throw_excption_when_no_column_text(self):
+        with self.assertRaises(RuntimeError) as context:
+            convet_text_to_base_form(pd.DataFrame({"id": [1, 2]}))
+
+        self.assertTrue(
+            "Column \"text\" has to be present in the input frame" in str(context.exception))
+
+    def test_should_throw_excption_when_no_column_id(self):
+        with self.assertRaises(RuntimeError) as context:
+            convet_text_to_base_form(pd.DataFrame(
+                {"text": ["Jest dobrze", "Jest źle"]}))
+
+        self.assertTrue(
+            "Column \"id\" has to be present in the input frame" in str(context.exception))
+
+    @mock.patch.object(ClarinService,'run', new = mocked_clarinServiceRun)  
+    def test_should_not_return_None(self):
+        result = convet_text_to_base_form(self.input)
+        self.assertIsNotNone(result)
+
+    @mock.patch.object(ClarinService,'run', new = mocked_clarinServiceRun)  
+    def test_should_return_data_frame_with_columns_id_and_text(self):
+        result = convet_text_to_base_form(self.input)
+        self.assertIsInstance(result, pd.DataFrame)
+        expected_columns = ["id", "text"]
+        self.assertListEqual(expected_columns, result.columns.to_list()) 
+
+    @mock.patch.object(ClarinService,'run', new = mocked_clarinServiceRun) 
+    @mock.patch.object(XmlParser,'extractBaseFormOfWordsThatHasGeoAnnotation', new = mocked_xml_parser) 
+    def test_text_should_be_transformed_to_base_form(self):
+        expected_text = "Warszawa;Warszawa"
+        #input text des not really matters coz other valuse are returnred from mecked functions
+        result = convet_text_to_base_form(self.input)
+        print(result)
+        self.assertEqual(result.iloc[0]['text'], expected_text)
+    

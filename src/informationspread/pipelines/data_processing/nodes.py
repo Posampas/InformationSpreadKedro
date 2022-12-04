@@ -1,5 +1,7 @@
 import pandas as pd
 import re
+from src.informationspread.processors.clarinService import ClarinService 
+from src.informationspread.processors.xml_parser import XmlParser
 
 def remove_RT(twitts: pd.DataFrame) -> pd.DataFrame:
     """ Removes RT twitts from users timelines
@@ -84,6 +86,27 @@ def remove_non_ascii_chars(twitts:pd.DataFrame) -> pd.DataFrame:
     return twitts
 
 
+def convet_text_to_base_form(twitts: pd.DataFrame) -> pd.DataFrame:
+    """ Returns base form of the words that have geo annotation.
+    Args : dataframe containg columns text and id
+
+    Retruns:
+        twitts: where in text are only presents the words that have geo annotation
+    """
+    _throw_if_column_not_present('text', twitts)
+    _throw_if_column_not_present('id', twitts)
+    lmpn = 'any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|ccl_emo({"lang":"polish"})'
+    for i , row  in twitts.iterrows():
+        baseFromService = ClarinService(row['text'], lmpn)
+        response = baseFromService.run()
+        parsers = list(map(lambda x: XmlParser(x), response))
+        transformed = list(map(lambda x: x.extractBaseFormOfWordsThatHasGeoAnnotation(), parsers))
+        joined = ';'.join(transformed)
+        twitts.at[i , 'text'] = joined
+    return twitts
+
 def _throw_if_column_not_present(column:str, twitts: pd.DataFrame) -> None:
     if (column not in twitts.columns.to_list()):
         raise RuntimeError("Column \"{}\" has to be present in the input frame".format(column)) 
+    
+   

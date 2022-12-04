@@ -3,6 +3,7 @@ import lpmn_client
 import tempfile
 import os
 import zipfile
+from typing import List
 
 class ClarinService:
 
@@ -10,7 +11,7 @@ class ClarinService:
         self.text = text
         self.lmpn = lmpn
 
-    def run(self):
+    def run(self) -> List:
         chunks = self._divide_text_into_chunks(self.text)
         responses  = []
         for chunk in chunks:
@@ -64,5 +65,7 @@ class ClarinService:
         return ''.join(un_ziped_path.readlines())
 
 if __name__ == "__main__":
-    c = ClarinService("Warszawa;Kraków;Brześć;", lmpn='any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|geolocation({"limit":2})')
-    print(c.run())
+    # c = ClarinService("Warszawa;Kraków;Brześć;", lmpn='any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|geolocation({"limit":2})')
+    # print(c.run())
+    c = ClarinService("Jest dobrze w Warszawie")
+    print(c.run()[0])
