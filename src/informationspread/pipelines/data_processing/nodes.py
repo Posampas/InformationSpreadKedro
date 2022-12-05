@@ -86,7 +86,7 @@ def remove_non_ascii_chars(twitts:pd.DataFrame) -> pd.DataFrame:
     return twitts
 
 
-def convet_text_to_base_form(twitts: pd.DataFrame) -> pd.DataFrame:
+def extract_words_with_geo_assosiation_and_convert_it_to_base_form(twitts: pd.DataFrame) -> pd.DataFrame:
     """ Returns base form of the words that have geo annotation.
     Args : dataframe containg columns text and id
 
@@ -104,6 +104,33 @@ def convet_text_to_base_form(twitts: pd.DataFrame) -> pd.DataFrame:
         joined = ';'.join(transformed)
         twitts.at[i , 'text'] = joined
     return twitts
+
+def transform_place_names_to_geo_cordinates(twitts: pd.DataFrame) -> pd.DataFrame:
+    """  
+    Args : dataframe containg columns text and id, where in text it expects to have been
+        provided with list string of Places containg names of places separated by semicolon ';'
+
+    Retruns:
+        twitts: 
+    """
+    _throw_if_column_not_present('id',twitts)
+    _throw_if_column_not_present('text',twitts)
+    users_geo_location_frames = []
+    for i, row in twitts.iterrows():
+        current_user_frame  = _get_cordinates_for_text(row['text'])
+        current_user_frame['id'] = row['id']
+        users_geo_location_frames.append(current_user_frame)
+        
+    return pd.concat(users_geo_location_frames)
+
+def _get_cordinates_for_text(text : str) :
+    lmpn = 'any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|geolocation({"limit":2})'
+    service = ClarinService(text=text,lmpn = lmpn)
+    response = service.run()
+    parsers = list(map(lambda x: XmlParser(x), response))
+    transformed = list(map(lambda x: x.extract_geo_addnotations(), parsers))
+    
+    return pd.concat(transformed)
 
 def _throw_if_column_not_present(column:str, twitts: pd.DataFrame) -> None:
     if (column not in twitts.columns.to_list()):
