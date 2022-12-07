@@ -1,7 +1,7 @@
 from kedro.pipeline import Pipeline, node
 from kedro.pipeline.modular_pipeline import pipeline
 
-from .nodes import remove_RT, drop_na_text, join_user_text, remove_non_polish_tweets, remove_regex_from_text, remove_non_ascii_chars
+from .nodes import remove_RT, drop_na_text, join_user_text, remove_non_polish_tweets, remove_regex_from_text, remove_non_ascii_chars, extract_words_with_geo_assosiation_and_convert_it_to_base_form, transform_place_names_to_geo_cordinates
 
 
 def create_pipeline(**kwargs) -> Pipeline:
@@ -46,9 +46,22 @@ def create_pipeline(**kwargs) -> Pipeline:
             node(
                 func=join_user_text,
                 inputs="twitts_with_links_removed",
-                outputs="cleaned_data",
+                outputs="joined_time_line_text",
                 name="concatinate_user_timeline",
             ),
+            node(
+                func=extract_words_with_geo_assosiation_and_convert_it_to_base_form,
+                inputs="joined_time_line_text",
+                outputs="words_with_geo_assosiaton",
+                name="extract_words_that_have_geo_assosiation",
+            ),
+            node(
+                func=transform_place_names_to_geo_cordinates,
+                inputs="words_with_geo_assosiaton",
+                outputs="cleaned_data",
+                name="enirich_place_names_wtich_geo_cordinates",
+            ),
+
             
         ],
         namespace="data_processing",

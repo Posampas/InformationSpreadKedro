@@ -1,7 +1,7 @@
 import pandas as pd
 import re
-from src.informationspread.processors.clarinService import ClarinService 
-from src.informationspread.processors.xml_parser import XmlParser
+from ...processors.clarinService import ClarinService 
+from ...processors.xml_parser import XmlParser
 
 def remove_RT(twitts: pd.DataFrame) -> pd.DataFrame:
     """ Removes RT twitts from users timelines
@@ -94,7 +94,7 @@ def extract_words_with_geo_assosiation_and_convert_it_to_base_form(twitts: pd.Da
         twitts: where in text are only presents the words that have geo annotation
     """
     _throw_if_column_not_present('text', twitts)
-    _throw_if_column_not_present('id', twitts)
+    _throw_if_column_not_present('user_id', twitts)
     lmpn = 'any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|ccl_emo({"lang":"polish"})'
     for i , row  in twitts.iterrows():
         baseFromService = ClarinService(row['text'], lmpn)
@@ -113,12 +113,12 @@ def transform_place_names_to_geo_cordinates(twitts: pd.DataFrame) -> pd.DataFram
     Retruns:
         twitts: 
     """
-    _throw_if_column_not_present('id',twitts)
+    _throw_if_column_not_present('user_id',twitts)
     _throw_if_column_not_present('text',twitts)
     users_geo_location_frames = []
     for i, row in twitts.iterrows():
         current_user_frame  = _get_cordinates_for_text(row['text'])
-        current_user_frame['id'] = row['id']
+        current_user_frame['user_id'] = row['user_id']
         users_geo_location_frames.append(current_user_frame)
         
     return pd.concat(users_geo_location_frames)

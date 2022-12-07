@@ -185,7 +185,7 @@ def mocked_xml_parser(*args, **kwagrs):
 class TestConvertToBaseFormUnsingClarinService(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.input = pd.DataFrame({"id": [1, 2], "text": ["Jest dobrze Warszawa", "Jest źle"]})
+        self.input = pd.DataFrame({"user_id": [1, 2], "text": ["Jest dobrze Warszawa", "Jest źle"]})
 
     def test_should_import_function(self):
         func = extract_words_with_geo_assosiation_and_convert_it_to_base_form
@@ -204,7 +204,7 @@ class TestConvertToBaseFormUnsingClarinService(unittest.TestCase):
                 {"text": ["Jest dobrze", "Jest źle"]}))
 
         self.assertTrue(
-            "Column \"id\" has to be present in the input frame" in str(context.exception))
+            "Column \"user_id\" has to be present in the input frame" in str(context.exception))
 
     @mock.patch.object(ClarinService,'run', new = mocked_clarinServiceRun)  
     def test_should_not_return_None(self):
@@ -215,7 +215,7 @@ class TestConvertToBaseFormUnsingClarinService(unittest.TestCase):
     def test_should_return_data_frame_with_columns_id_and_text(self):
         result = extract_words_with_geo_assosiation_and_convert_it_to_base_form(self.input)
         self.assertIsInstance(result, pd.DataFrame)
-        expected_columns = ["id", "text"]
+        expected_columns = ["user_id", "text"]
         self.assertListEqual(expected_columns, result.columns.to_list()) 
 
     @mock.patch.object(ClarinService,'run', new = mocked_clarinServiceRun) 
@@ -242,7 +242,7 @@ def mocked_extract_geo_addnotations(*args, **kwargs):
 class TestTranformPlaceNameToGeoCordinates(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.input = pd.DataFrame({"id":[1,2,3],"text":["Warszwa;Warszawa", "Kraków","Warszwa"]})
+        self.input = pd.DataFrame({"user_id":[1,2,3],"text":["Warszwa;Warszawa", "Kraków","Warszwa"]})
 
     def test_can_import(self):
         function = transform_place_names_to_geo_cordinates
@@ -254,12 +254,12 @@ class TestTranformPlaceNameToGeoCordinates(unittest.TestCase):
                 {"text": ["Warszawa", "Kraków"]}))
 
         self.assertTrue(
-            "Column \"id\" has to be present in the input frame" in str(context.exception))
+            "Column \"user_id\" has to be present in the input frame" in str(context.exception))
 
     def test_should_throw_excption_when_no_column_text(self):
         with self.assertRaises(RuntimeError) as context:
             transform_place_names_to_geo_cordinates(pd.DataFrame(
-                {"id": [1,2], "column": ["test", "text"]}))
+                {"user_id": [1,2], "column": ["test", "text"]}))
 
         self.assertTrue(
             "Column \"text\" has to be present in the input frame" in str(context.exception))
@@ -269,9 +269,9 @@ class TestTranformPlaceNameToGeoCordinates(unittest.TestCase):
         result = transform_place_names_to_geo_cordinates(self.input)
         print(result)
         self.assertEqual(len(result), 9)
-        self.assertEqual(len(result[result['id'] == 1]) , 3 )
-        self.assertEqual(len(result[result['id'] == 2]) , 3 )
-        self.assertEqual(len(result[result['id'] == 3]) , 3 )
+        self.assertEqual(len(result[result['user_id'] == 1]) , 3 )
+        self.assertEqual(len(result[result['user_id'] == 2]) , 3 )
+        self.assertEqual(len(result[result['user_id'] == 3]) , 3 )
         
 
 
