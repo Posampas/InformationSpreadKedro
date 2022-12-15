@@ -239,15 +239,6 @@ class TestConvertToBaseFormUnsingClarinService(unittest.TestCase):
         self.assertEqual(result.iloc[0]['text'], expected_text)
 
 
-    def test_no_geo_assosiated_text_in_response_do_not_join_that_in_fianl_string(self):
-        expected_text = ""
-        #input text des not really matters coz other valuse are returnred from mecked functions
-        frame = pd.DataFrame({"user_id":[1], "text":[text1]})
-        result = extract_words_with_geo_assosiation_and_convert_it_to_base_form(frame)
-        print(result)
-        self.assertEqual(result.iloc[0]['text'], expected_text)
-
-
     
 def mocked_get_cordinates(*args, **kwargs):
     return mocked_extract_geo_addnotations() 
