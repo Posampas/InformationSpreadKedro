@@ -82,4 +82,44 @@ class TestClarinService(TestCase):
         min_len = 15 
         result = service._divide_text_into_chunks(text, min_len)
         # self.assertEqual(3, len(result))
-        self.assertListEqual(expected, result)     
+        self.assertListEqual(expected, result)
+
+    def test_chunk(self):
+        text = """
+            Kłamstwa Tuska pewnie pochodziły od takich doradców jak morawiecki np
+            Teraz gdy  rządzi już ładne pare lat sytuacja się nie zmieniła
+            Żart? Może warto na kogoś nowego choć oddać głos?
+            A co powiesz o Obajtku i cenach paliwa?
+            Kiedy pan ostatnio u lekarza był?
+            Czyli maszyna jest bardziej rozwinięta niż żywy organizm? No ciekawa teoria ale chyba na lekcjach biologii się nie uważało ;)
+            Czy pielęgniarka w szkole może pytać dzieciaki czy są poddane eksperymentalnej szczepionce na c19?
+            Ale to Pani partia pokłóciła nas nawet z Węgrami więc po co te puste gadanie
+            A Pan nadal wierzy że jesteśmy krajem niepodległym?
+            Trzeba było nie wędrować po knajpach ;)
+            Przez ostatnie 2 lata to obecny rząd zniewalał Polaków i uśmiercił 200tys ludzi także lepiej przemyśleć to co się pisze!!!
+            Kłamiesz, nie odczuwamy, a wręcz przeciwnie!!!
+            Słusznie w polszmacie i rządzie same małpy. Zabezpieczanie się :)
+            Znajomy zapaleniec ma kilkanascie sztuk broni i z tego co wiem do tej pory nikogo nie zabił.
+            Ty jesteś zwyczajnie jebn...ty??? Kiedyś uważałem cię za porządnego dziennikarza ale widać że jesteś sprzedajna ku...
+            Jakie rozkazy dostaliście do wykonania?
+            Kolega co pracuje w cocacoli powiedział kilka dni temu że obi teraz biją rekordy sprzedaży także widać Polakom drożyzna nie przeszkadza…
+            A sprzedaż "małpek"?
+            No niezłych tam ekspertów macie ;)
+            Czy najgorszy rząd w dziejach mógłby już skończyć swoją przestępczą działalność?
+            To jest objaw bezobjawowej małpiej ospy. Zalecam konsultacje z
+            A kto wam kazał jak małpy się ubierać i wspierać ten pandemiczny cyrk?
+            W jaki sposób zbadano że wodór roztapia się na hel? Wodór jest pierwszym pierwiastkiem w układzie mendelejewa czy skoro się „roztapia” to nie powinno to jakoś inaczej być?
+            Ale ja nie mam norweskich znajomych :(
+            Źle! Najpierw był Mirawietzky ;)
+            I po doradcy Tuska mordowieckim...
+            Kolejny comming out czerwonego
+            Dziennikarze wogóle nie powinni tracić czasu na mówienie o tych kolejnych bzdurach żeby nie napędzać przemysłu strachu!
+            Nie sądzę żeby to gdzie wkładasz swój kij kogoś interesowało ;)
+            Ot odezwał się człek godny zaufania...
+            Kurde nawet taki greenpeace nic sobie z was nie robi… po co nam taki „rząd”…
+            Pisowcy to idioci więc tam nie ma dla nich miejsca
+            Oczywiście że nie. Że też ludzie mają takie pomysły...
+            Polacy zresztą też
+        """ 
+
+        

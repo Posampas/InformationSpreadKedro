@@ -16,11 +16,9 @@ class XmlParser():
         for tok in tokens:
             if self._token_does_not_have_geo_annotation(tok):
                 continue
-            base_form = tok.findall('./lex/base')
-            if (len(base_form) > 0):
-                base_tags.append(base_form[0])
+            base_tags.append(tok.find('orth'))
         base_words = list(map(lambda x: x.text,base_tags))
-        return ';'.join(base_words)
+        return ' '.join(base_words)
 
     def extract_geo_addnotations(self) ->pd.DataFrame:
         frame = pd.DataFrame()

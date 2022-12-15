@@ -8,7 +8,7 @@ from src.informationspread.pipelines.data_processing.nodes import extract_words_
 from src.informationspread.pipelines.data_processing.nodes import transform_place_names_to_geo_cordinates , _get_cordinates_for_text
 import pandas as pd
 
-
+from .test_strings import text1
 from src.informationspread.processors.clarinService import ClarinService
 from src.informationspread.processors.xml_parser import XmlParser 
 from unittest import mock
@@ -181,6 +181,8 @@ def mocked_clarinServiceRun(*args, **kwargs):
     return ["<xml></xml>","<xml></xml>"]
 def mocked_xml_parser(*args, **kwagrs):
     return "Warszawa"
+def mocked_xml_parser_return_empty_string(*args, **kwagrs):
+    return ""
 
 class TestConvertToBaseFormUnsingClarinService(unittest.TestCase):
 
@@ -226,6 +228,26 @@ class TestConvertToBaseFormUnsingClarinService(unittest.TestCase):
         result = extract_words_with_geo_assosiation_and_convert_it_to_base_form(self.input)
         print(result)
         self.assertEqual(result.iloc[0]['text'], expected_text)
+ 
+    @mock.patch.object(ClarinService,'run', new = mocked_clarinServiceRun) 
+    @mock.patch.object(XmlParser,'extractBaseFormOfWordsThatHasGeoAnnotation', new = mocked_xml_parser_return_empty_string) 
+    def test_no_geo_assosiated_text_in_response_do_not_join_that_in_fianl_string(self):
+        expected_text = ""
+        #input text des not really matters coz other valuse are returnred from mecked functions
+        result = extract_words_with_geo_assosiation_and_convert_it_to_base_form(self.input)
+        print(result)
+        self.assertEqual(result.iloc[0]['text'], expected_text)
+
+
+    def test_no_geo_assosiated_text_in_response_do_not_join_that_in_fianl_string(self):
+        expected_text = ""
+        #input text des not really matters coz other valuse are returnred from mecked functions
+        frame = pd.DataFrame({"user_id":[1], "text":[text1]})
+        result = extract_words_with_geo_assosiation_and_convert_it_to_base_form(frame)
+        print(result)
+        self.assertEqual(result.iloc[0]['text'], expected_text)
+
+
     
 def mocked_get_cordinates(*args, **kwargs):
     return mocked_extract_geo_addnotations() 
@@ -282,6 +304,7 @@ class TestTranformPlaceNameToGeoCordinates(unittest.TestCase):
         result = _get_cordinates_for_text("Warszawa;Kraków;Poznań")
         self.assertIsNotNone(result)
         self.assertIsInstance(result,pd.DataFrame)
-
         self.assertEqual(len(result) ,6)
+    
+ 
         

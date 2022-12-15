@@ -45,10 +45,24 @@ users:
   # more about layers in the Data Engineering Convention:
   # https://kedro.readthedocs.io/en/stable/tutorial/visualise_pipeline.html#interact-with-data-engineering-convention
   layer: raw
+main:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/twitts.csv
+  layer: raw
 
 twitts:
   type: pandas.CSVDataSet
   filepath: data/01_raw/twitts.csv
+  layer: raw 
+
+joined_time_line_text:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/joined.csv
+  layer: raw
+
+words_with_geo_assosiaton:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/words_with_geo_assosiaton.csv
   layer: raw
 
 cleaned_data:
