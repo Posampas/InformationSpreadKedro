@@ -99,7 +99,8 @@ def extract_words_with_geo_assosiation_and_convert_it_to_base_form(twitts: pd.Da
     total_len = len(twitts)
     for i , row  in twitts.iterrows():
         print(i + 1 , "/", total_len, 'user_id',row['user_id'])
-        baseFromService = ClarinService(row['text'], lmpn)
+        text = row['text'][:20000]
+        baseFromService = ClarinService(text, lmpn)
         response = baseFromService.run()
         parsers = list(map(lambda x: XmlParser(x), response))
         transformed = list(map(lambda x: x.extractBaseFormOfWordsThatHasGeoAnnotation(), parsers))
@@ -122,14 +123,15 @@ def transform_place_names_to_geo_cordinates(twitts: pd.DataFrame) -> pd.DataFram
     users_geo_location_frames = []
     for i, row in twitts.iterrows():
         print(row['text'])
-        current_user_frame  = _get_cordinates_for_text(row['text'])
+        text = row['text'][:20000]
+        current_user_frame  = _get_cordinates_for_text(text)
         current_user_frame['user_id'] = row['user_id']
         users_geo_location_frames.append(current_user_frame)
         
     return pd.concat(users_geo_location_frames)
 
 def _get_cordinates_for_text(text : str) :
-    lmpn = 'any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|geolocation({"limit":2})'
+    lmpn = 'any2txt|wcrft2({"morfeusz2":false})|liner2({"model":"n82"})|geolocation({"limit":1})'
     service = ClarinService(text=text,lmpn = lmpn)
     response = service.run()
     parsers = list(map(lambda x: XmlParser(x), response))

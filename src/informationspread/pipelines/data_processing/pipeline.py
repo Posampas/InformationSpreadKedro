@@ -7,48 +7,48 @@ from .nodes import remove_RT, drop_na_text, join_user_text, remove_non_polish_tw
 def create_pipeline(**kwargs) -> Pipeline:
     return pipeline(
         [
-            # node(
-            #     func=drop_na_text,
-            #     inputs="twitts",
-            #     outputs="twitts_no_na",
-            #     name="remove_rows_with_no_text_node",
-            # ),
-            # node(
-            #     func=remove_RT,
-            #     inputs="twitts_no_na",
-            #     outputs="twitts_removed_RT",
-            #     name="remove_rt_node",
-            # ),
-            # node(
-            #     func=remove_non_polish_tweets,
-            #     inputs="twitts_removed_RT",
-            #     outputs="twitts_only_in_polish",
-            #     name="remove_non_polish_twitts_node",
-            # ),
-            # node(
-            #     func=remove_regex_from_text,
-            #     inputs=["twitts_only_in_polish","params:emojji_regex"],
-            #     outputs="twitts_asci_chars",
-            #     name="remove_not_asci_chars_node",
-            # ),
-            # node(
-            #     func=remove_regex_from_text,
-            #     inputs=["twitts_asci_chars", 'params:user_mention_reqex'],
-            #     outputs="twitts_with_mentions_removed",
-            #     name="remove_mentions_from_text_node",
-            # ),
-            # node(
-            #     func=remove_regex_from_text,
-            #     inputs=["twitts_with_mentions_removed", 'params:twitter_links_reex'],
-            #     outputs="twitts_with_links_removed",
-            #     name="remove_links_from_text_node",
-            # ),
-            # node(
-            #     func=join_user_text,
-            #     inputs="twitts_with_links_removed",
-            #     outputs="joined_time_line_text",
-            #     name="concatinate_user_timeline",
-            # ),
+            node(
+                func=drop_na_text,
+                inputs="twitts",
+                outputs="twitts_no_na",
+                name="remove_rows_with_no_text_node",
+            ),
+            node(
+                func=remove_RT,
+                inputs="twitts_no_na",
+                outputs="twitts_removed_RT",
+                name="remove_rt_node",
+            ),
+            node(
+                func=remove_non_polish_tweets,
+                inputs="twitts_removed_RT",
+                outputs="twitts_only_in_polish",
+                name="remove_non_polish_twitts_node",
+            ),
+            node(
+                func=remove_regex_from_text,
+                inputs=["twitts_only_in_polish","params:emojji_regex"],
+                outputs="twitts_asci_chars",
+                name="remove_not_asci_chars_node",
+            ),
+            node(
+                func=remove_regex_from_text,
+                inputs=["twitts_asci_chars", 'params:user_mention_reqex'],
+                outputs="twitts_with_mentions_removed",
+                name="remove_mentions_from_text_node",
+            ),
+            node(
+                func=remove_regex_from_text,
+                inputs=["twitts_with_mentions_removed", 'params:twitter_links_reex'],
+                outputs="twitts_with_links_removed",
+                name="remove_links_from_text_node",
+            ),
+            node(
+                func=join_user_text,
+                inputs="twitts_with_links_removed",
+                outputs="joined_time_line_text",
+                name="concatinate_user_timeline",
+            ),
             node(
                 func=extract_words_with_geo_assosiation_and_convert_it_to_base_form,
                 inputs="joined_time_line_text",
@@ -65,7 +65,7 @@ def create_pipeline(**kwargs) -> Pipeline:
             
         ],
         namespace="data_processing",
-        inputs=["joined_time_line_text"],
+        inputs=["twitts"],
         outputs="cleaned_data",
     )
 

@@ -15,7 +15,7 @@ def change_file_name(old_path, new_path):
 def run_kedro_pipeline():
     subprocess.run(["kedro", "run"])
 
-start = 112
+start = 21
 end = 114
 for number in range(start, end, 1):
     next_chunk = raw_data_path + str(number) + extension

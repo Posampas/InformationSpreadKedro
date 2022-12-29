@@ -18,7 +18,7 @@ class XmlParser():
                 continue
             base_tags.append(tok.find('orth'))
         base_words = list(map(lambda x: x.text,base_tags))
-        return ' '.join(base_words)
+        return ';'.join(base_words)
 
     def extract_geo_addnotations(self) ->pd.DataFrame:
         frame = pd.DataFrame()
