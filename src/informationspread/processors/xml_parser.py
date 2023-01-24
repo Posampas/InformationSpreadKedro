@@ -41,3 +41,15 @@ class XmlParser():
             if ann.attrib['chan'] == 'nam_loc_gpe_city' and int(ann.text) > 0:
                 return False
         return True
+
+if __name__ == "__main__":
+    old = pd.read_csv('cites.csv')
+    print(old)
+    response_string = None
+    with open('response.xml') as file:
+        response_string =  "".join(file.readlines())
+    parser = XmlParser(response_string)
+    frame = parser.extract_geo_addnotations()
+    frame.drop_duplicates(inplace=True)
+    frame = pd.concat([old,frame])
+    frame.to_csv('cites.csv', columns=frame.columns.to_list(), index= False)

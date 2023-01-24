@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chunkList SYSTEM "ccl.dtd">
+<chunkList>
+ <chunk type="p" id="ch1">
+  <sentence id="s1">
+   <tok>
+    <orth>Przemyśl</orth>
+    <lex disamb="1"><base>Przemyśl</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Słubice</orth>
+    <lex disamb="1"><base>Słubice</base><ctag>subst:pl:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">39</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">26</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">14.5662367;52.3557481;Zliwice (Zliwitz);Słubice, Akademicka, Osiedle Słowiańskie, Weißes Vorwerk, Słubice, gmina Słubice, powiat słubicki, województwo lubuskie, 69-100, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Ostrów</orth>
+    <lex disamb="1"><base>ostrowa</base><ctag>subst:pl:gen:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">19</ann>
+    <ann chan="nam" head="1">38</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">25</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">17.8167085;51.6495023;administrative;Ostrów Wielkopolski, powiat ostrowski, województwo wielkopolskie, 63-400, Polska</prop>
+    <prop key="nam_loc:coord:1">17.8167085;51.6495023;administrative;Ostrów Wielkopolski, powiat ostrowski, województwo wielkopolskie, 63-400, Polska</prop>
+   </tok>
+   <tok>
+    <orth>Wielkopolski</orth>
+    <lex disamb="1"><base>Wielkopolska</base><ctag>subst:sg:gen:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city">19</ann>
+    <ann chan="nam">38</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">25</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Kamienica</orth>
+    <lex disamb="1"><base>Kamienica</base><ctag>subst:sg:nom:f</ctag></lex>
+    <lex disamb="1"><base>kamienica</base><ctag>subst:sg:nom:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Pabianice</orth>
+    <lex disamb="1"><base>Pabianice</base><ctag>subst:pl:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">18</ann>
+    <ann chan="nam" head="1">37</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">24</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">19.3535024;51.6639859;administrative;Pabianice, powiat pabianicki, województwo łódzkie, 95-200, Polska</prop>
+    <prop key="nam_loc:coord:1">19.3535024;51.6639859;administrative;Pabianice, powiat pabianicki, województwo łódzkie, 95-200, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Zakopane</orth>
+    <lex disamb="1"><base>Zakopane</base><ctag>subst:sg:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">36</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">23</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">19.950659;49.2969446;administrative;Zakopane, powiat tatrzański, województwo małopolskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Rzeszów</orth>
+    <lex disamb="1"><base>Rzeszów</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">17</ann>
+    <ann chan="nam" head="1">34</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">22</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">22.0047174;50.0374531;city;Rzeszów, województwo podkarpackie, Polska</prop>
+    <prop key="nam_loc:coord:1">22.0047174;50.0374531;city;Rzeszów, województwo podkarpackie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Pionki</orth>
+    <lex disamb="1"><base>pionek</base><ctag>subst:pl:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">16</ann>
+    <ann chan="nam" head="1">32</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">21</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">18.1818661;53.9670975;hamlet;Pionki, gmina Stara Kiszewa, powiat kościerski, województwo pomorskie, 83-430, Polska</prop>
+    <prop key="nam_loc:coord:1">18.1818661;53.9670975;hamlet;Pionki, gmina Stara Kiszewa, powiat kościerski, województwo pomorskie, 83-430, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Elbląg</orth>
+    <lex disamb="1"><base>Elbląg</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">15</ann>
+    <ann chan="nam" head="1">30</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">19.4044583;54.1558708;city;Elbląg, województwo warmińsko-mazurskie, 82-300, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Świnoujście</orth>
+    <lex disamb="1"><base>Świnoujście</base><ctag>subst:sg:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">28</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Bezrzecze</orth>
+    <lex disamb="1"><base>bezrzecze</base><ctag>subst:sg:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">14</ann>
+    <ann chan="nam" head="1">26</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">20</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">14.4540166081566;53.45797175;administrative;Bezrzecze, Nowowiejska 27, Bezrzecze, gmina Dobra (Szczecińska), powiat policki, województwo zachodniopomorskie, Polska</prop>
+    <prop key="nam_loc:coord:1">14.4540166081566;53.45797175;administrative;Bezrzecze, Nowowiejska 27, Bezrzecze, gmina Dobra (Szczecińska), powiat policki, województwo zachodniopomorskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Legnica</orth>
+    <lex disamb="1"><base>Legnica</base><ctag>subst:sg:nom:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">13</ann>
+    <ann chan="nam" head="1">35</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">19</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">16.1746744030377;51.20474605;administrative;Legnica, województwo dolnośląskie, Polska</prop>
+    <prop key="nam_loc:coord:1">16.1746744030377;51.20474605;administrative;Legnica, województwo dolnośląskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Wodzisław</orth>
+    <lex disamb="1"><base>Wodzisław</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">12</ann>
+    <ann chan="nam" head="1">33</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">18</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">18.4630383;50.0024107;administrative;Wodzisław Śląski, powiat wodzisławski, województwo śląskie, Polska</prop>
+    <prop key="nam_loc:coord:1">18.4630383;50.0024107;administrative;Wodzisław Śląski, powiat wodzisławski, województwo śląskie, Polska</prop>
+   </tok>
+   <tok>
+    <orth>Śląski</orth>
+    <lex disamb="1"><base>śląski</base><ctag>adj:sg:nom:m3:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">12</ann>
+    <ann chan="nam">33</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">18</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Warszawa</orth>
+    <lex disamb="1"><base>Warszawa</base><ctag>subst:sg:nom:f</ctag></lex>
+    <lex disamb="1"><base>warszawa</base><ctag>subst:sg:nom:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">11</ann>
+    <ann chan="nam" head="1">31</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">36</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">21.0714111288323;52.2337172;administrative;Warszawa, województwo mazowieckie, Polska</prop>
+    <prop key="nam_loc:coord:1">21.0714111288323;52.2337172;administrative;Warszawa, województwo mazowieckie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>,</orth>
+    <lex disamb="1"><base>,</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <tok>
+    <orth>Powiśle</orth>
+    <lex disamb="1"><base>powiśle</base><ctag>subst:sg:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">10</ann>
+    <ann chan="nam" head="1">29</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">35</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">21.0293513;52.2380549;neighbourhood;Powiśle, Śródmieście, Warszawa, województwo mazowieckie, 00-348, Polska</prop>
+    <prop key="nam_loc:coord:1">21.0293513;52.2380549;neighbourhood;Powiśle, Śródmieście, Warszawa, województwo mazowieckie, 00-348, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Koszalin</orth>
+    <lex disamb="1"><base>Koszalin</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">27</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">34</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">16.2175307682716;54.20727105;administrative;Koszalin, województwo zachodniopomorskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Konin</orth>
+    <lex disamb="1"><base>konina</base><ctag>subst:pl:gen:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">9</ann>
+    <ann chan="nam" head="1">25</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">33</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">20.1338841;49.5950086;river;Konina, gmina Niedźwiedź, powiat limanowski, województwo małopolskie, 34-735, Polska</prop>
+    <prop key="nam_loc:coord:1">20.1338841;49.5950086;river;Konina, gmina Niedźwiedź, powiat limanowski, województwo małopolskie, 34-735, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Wałbrzych</orth>
+    <lex disamb="1"><base>Wałbrzych</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">8</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">16.2846403361278;50.785221;administrative;Wałbrzych, województwo dolnośląskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Działdowo</orth>
+    <lex disamb="1"><base>Działdowo</base><ctag>subst:sg:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">7</ann>
+    <ann chan="nam" head="1">24</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">32</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">20.1817841;53.2346517;administrative;Działdowo, powiat działdowski, województwo warmińsko-mazurskie, 13-201, Polska</prop>
+    <prop key="nam_loc:coord:1">20.1817841;53.2346517;administrative;Działdowo, powiat działdowski, województwo warmińsko-mazurskie, 13-201, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Brzeg</orth>
+    <lex disamb="1"><base>brzeg</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">6</ann>
+    <ann chan="nam" head="1">23</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">31</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">17.470497;50.8614882;administrative;Brzeg, powiat brzeski, województwo opolskie, Polska</prop>
+    <prop key="nam_loc:coord:1">17.470497;50.8614882;administrative;Brzeg, powiat brzeski, województwo opolskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Katowice</orth>
+    <lex disamb="1"><base>Katowice</base><ctag>subst:pl:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">5</ann>
+    <ann chan="nam" head="1">22</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">30</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">19.0058877566063;50.2137321;administrative;Katowice, Górnośląsko-Zagłębiowska Metropolia, województwo śląskie, Polska</prop>
+    <prop key="nam_loc:coord:1">19.0058877566063;50.2137321;administrative;Katowice, Górnośląsko-Zagłębiowska Metropolia, województwo śląskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Siedlce</orth>
+    <lex disamb="1"><base>Siedlce</base><ctag>subst:pl:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">21</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">29</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">22.2812533029883;52.1615938;administrative;Siedlce, województwo mazowieckie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Starachowice</orth>
+    <lex disamb="1"><base>Starachowice</base><ctag>subst:pl:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">4</ann>
+    <ann chan="nam" head="1">20</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">28</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">21.0761377;51.0518865;administrative;Starachowice, powiat starachowicki, województwo świętokrzyskie, 27-200, Polska</prop>
+    <prop key="nam_loc:coord:1">21.0761377;51.0518865;administrative;Starachowice, powiat starachowicki, województwo świętokrzyskie, 27-200, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Lubartów</orth>
+    <lex disamb="1"><base>Lubartów</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">3</ann>
+    <ann chan="nam" head="1">19</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">27</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">22.6052895;51.4660473;administrative;Lubartów, powiat lubartowski, województwo lubelskie, 21-100, Polska</prop>
+    <prop key="nam_loc:coord:1">22.6052895;51.4660473;administrative;Lubartów, powiat lubartowski, województwo lubelskie, 21-100, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Gorzów</orth>
+    <lex disamb="1"><base>Gorzów</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">2</ann>
+    <ann chan="nam" head="1">18</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">17</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">15.2107553190939;52.73057555;administrative;Gorzów Wielkopolski, województwo lubuskie, Polska</prop>
+    <prop key="nam_loc:coord:1">15.2107553190939;52.73057555;administrative;Gorzów Wielkopolski, województwo lubuskie, Polska</prop>
+   </tok>
+   <tok>
+    <orth>Wielkopolski</orth>
+    <lex disamb="1"><base>wielkopolski</base><ctag>adj:sg:nom:m3:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">2</ann>
+    <ann chan="nam">18</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">17</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Sosnowiec</orth>
+    <lex disamb="1"><base>Sosnowiec</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">1</ann>
+    <ann chan="nam" head="1">17</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">16</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">19.2155619539471;50.2712295;administrative;Sosnowiec, Górnośląsko-Zagłębiowska Metropolia, województwo śląskie, Polska</prop>
+    <prop key="nam_loc:coord:1">19.2155619539471;50.2712295;administrative;Sosnowiec, Górnośląsko-Zagłębiowska Metropolia, województwo śląskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Wielichowo</orth>
+    <lex disamb="1"><base>Wielichowo</base><ctag>subst:sg:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">33</ann>
+    <ann chan="nam" head="1">16</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">15</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">16.3521384;52.1182673;administrative;Wielichowo, gmina Wielichowo, powiat grodziski, województwo wielkopolskie, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">16.3521384;52.1182673;administrative;Wielichowo, gmina Wielichowo, powiat grodziski, województwo wielkopolskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Iława</orth>
+    <lex disamb="1"><base>Iława</base><ctag>subst:sg:nom:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">32</ann>
+    <ann chan="nam" head="1">15</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">14</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">19.5612175;53.5976095;administrative;Iława, powiat iławski, województwo warmińsko-mazurskie, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">19.5612175;53.5976095;administrative;Iława, powiat iławski, województwo warmińsko-mazurskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Głogów</orth>
+    <lex disamb="1"><base>Głogów</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">31</ann>
+    <ann chan="nam" head="1">14</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">13</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">16.0935674;51.663724;administrative;Głogów, powiat głogowski, województwo dolnośląskie, 67-200, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">16.0935674;51.663724;administrative;Głogów, powiat głogowski, województwo dolnośląskie, 67-200, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Kraśnik</orth>
+    <lex disamb="1"><base>kraśnik</base><ctag>subst:sg:nom:m2</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">13</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Chorzów</orth>
+    <lex disamb="1"><base>Chorzów</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">30</ann>
+    <ann chan="nam" head="1">12</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc_gpe_city:coord:1">18.9704425309351;50.2885563;administrative;Chorzów, Górnośląsko-Zagłębiowska Metropolia, województwo śląskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Dluga</orth>
+    <lex disamb="1"><base>dluga</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <tok>
+    <orth>Szlachecka</orth>
+    <lex disamb="1"><base>szlachecki</base><ctag>adj:sg:nom:f:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Leszno</orth>
+    <lex disamb="1"><base>Leszno</base><ctag>subst:sg:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">29</ann>
+    <ann chan="nam" head="1">11</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">12</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">16.5804218207642;51.8436068;administrative;Leszno, województwo wielkopolskie, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">16.5804218207642;51.8436068;administrative;Leszno, województwo wielkopolskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Dolnośląskie</orth>
+    <lex disamb="1"><base>dolnośląski</base><ctag>adj:sg:nom:n:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">10</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac" head="1">1</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_fac:coord:1">16.4330936;51.3807987;administrative;województwo dolnośląskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Strzelce</orth>
+    <lex disamb="1"><base>Strzelce</base><ctag>subst:pl:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">9</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution" head="1">1</ann>
+    <ann chan="nam_loc" head="1">11</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">15.5325925;52.8785255;administrative;Strzelce Krajeńskie, gmina Strzelce Krajeńskie, powiat strzelecko-drezdenecki, województwo lubuskie, 66-500, Polska</prop>
+   </tok>
+   <tok>
+    <orth>Krajeńskie</orth>
+    <lex disamb="1"><base>krajeński</base><ctag>adj:pl:nom:n:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">9</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">1</ann>
+    <ann chan="nam_loc">11</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Suwałki</orth>
+    <lex disamb="1"><base>Suwałki</base><ctag>subst:pl:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">8</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">10</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">22.9318782174945;54.1027125;administrative;Suwałki, województwo podlaskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Opolskie</orth>
+    <lex disamb="1"><base>opolski</base><ctag>adj:pl:nom:n:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">7</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Śląskie</orth>
+    <lex disamb="1"><base>śląski</base><ctag>adj:sg:nom:n:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Ożarów</orth>
+    <lex disamb="1"><base>Ożarów</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">28</ann>
+    <ann chan="nam" head="1">6</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">9</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">20.7941606;52.2080548;administrative;Ożarów Mazowiecki, gmina Ożarów Mazowiecki, powiat warszawski zachodni, województwo mazowieckie, 05-850, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">20.7941606;52.2080548;administrative;Ożarów Mazowiecki, gmina Ożarów Mazowiecki, powiat warszawski zachodni, województwo mazowieckie, 05-850, Polska</prop>
+   </tok>
+   <tok>
+    <orth>Mazowiecki</orth>
+    <lex disamb="1"><base>mazowiecki</base><ctag>adj:sg:nom:m3:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">28</ann>
+    <ann chan="nam">6</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">9</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Jelenia</orth>
+    <lex disamb="1"><base>jeleni</base><ctag>adj:sg:nom:f:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">5</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <tok>
+    <orth>Góra</orth>
+    <lex disamb="1"><base>góra</base><ctag>subst:sg:nom:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">5</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Krakow</orth>
+    <lex disamb="1"><base>krakow</base><ctag>subst:sg:nom:m1</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">4</ann>
+    <ann chan="nam_liv_person" head="1">1</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv" head="1">1</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Łódzkie</orth>
+    <lex disamb="1"><base>łódzki</base><ctag>adj:pl:nom:n:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Małopolskie</orth>
+    <lex disamb="1"><base>małopolski</base><ctag>adj:pl:nom:n:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">3</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Pomorskie</orth>
+    <lex disamb="1"><base>pomorski</base><ctag>adj:pl:nom:n:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Komornica</orth>
+    <lex disamb="1"><base>komornica</base><ctag>subst:sg:nom:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Włocławek</orth>
+    <lex disamb="1"><base>Włocławek</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">27</ann>
+    <ann chan="nam" head="1">2</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">8</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">19.0961297480544;52.6655636;administrative;Włocławek, województwo kujawsko-pomorskie, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">19.0961297480544;52.6655636;administrative;Włocławek, województwo kujawsko-pomorskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Żarki</orth>
+    <lex disamb="1"><base>Żarki</base><ctag>subst:pl:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">26</ann>
+    <ann chan="nam" head="1">1</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">7</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">19.3645599;50.6259563;administrative;Żarki, gmina Żarki, powiat myszkowski, województwo śląskie, 42-310, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">19.3645599;50.6259563;administrative;Żarki, gmina Żarki, powiat myszkowski, województwo śląskie, 42-310, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Nowy</orth>
+    <lex disamb="1"><base>nowy</base><ctag>adj:sg:nom:m3:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">25</ann>
+    <ann chan="nam" head="1">45</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">6</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">20.7154712;52.4306508;administrative;Nowy Dwór Mazowiecki, powiat nowodworski, województwo mazowieckie, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">20.7154712;52.4306508;administrative;Nowy Dwór Mazowiecki, powiat nowodworski, województwo mazowieckie, Polska</prop>
+   </tok>
+   <tok>
+    <orth>Dwór</orth>
+    <lex disamb="1"><base>dwór</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city">25</ann>
+    <ann chan="nam">45</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">6</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <tok>
+    <orth>Mazowiecki</orth>
+    <lex disamb="1"><base>mazowiecki</base><ctag>adj:sg:nom:m3:pos</ctag></lex>
+    <ann chan="nam_loc_gpe_city">25</ann>
+    <ann chan="nam">45</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">6</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Wąbrzeźno</orth>
+    <lex disamb="1"><base>wąbrzeźno</base><ctag>subst:sg:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">24</ann>
+    <ann chan="nam" head="1">44</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">5</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">18.947293;53.2799665;administrative;Wąbrzeźno, powiat wąbrzeski, województwo kujawsko-pomorskie, 87-200, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">18.947293;53.2799665;administrative;Wąbrzeźno, powiat wąbrzeski, województwo kujawsko-pomorskie, 87-200, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Swarzędz</orth>
+    <lex disamb="1"><base>Swarzędz</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">23</ann>
+    <ann chan="nam" head="1">43</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">4</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">17.0771038;52.4103728;administrative;Swarzędz, gmina Swarzędz, powiat poznański, województwo wielkopolskie, 62-020, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">17.0771038;52.4103728;administrative;Swarzędz, gmina Swarzędz, powiat poznański, województwo wielkopolskie, 62-020, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Ciechocinek</orth>
+    <lex disamb="1"><base>Ciechocinek</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam" head="1">42</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Racibórz</orth>
+    <lex disamb="1"><base>Racibórz</base><ctag>subst:sg:nom:m3</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">22</ann>
+    <ann chan="nam" head="1">41</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">3</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">18.2196766;50.0917343;administrative;Racibórz, powiat raciborski, województwo śląskie, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">18.2196766;50.0917343;administrative;Racibórz, powiat raciborski, województwo śląskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Gniezno</orth>
+    <lex disamb="1"><base>Gniezno</base><ctag>subst:sg:nom:n</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">21</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">2</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">17.595889;52.5359736;administrative;Gniezno, powiat gnieźnieński, województwo wielkopolskie, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">17.595889;52.5359736;administrative;Gniezno, powiat gnieźnieński, województwo wielkopolskie, Polska</prop>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>;</orth>
+    <lex disamb="1"><base>;</base><ctag>interp</ctag></lex>
+    <ann chan="nam_loc_gpe_city">0</ann>
+    <ann chan="nam">0</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc">0</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+   </tok>
+   <ns/>
+   <tok>
+    <orth>Legnicy</orth>
+    <lex disamb="1"><base>Legnica</base><ctag>subst:sg:gen:f</ctag></lex>
+    <ann chan="nam_loc_gpe_city" head="1">20</ann>
+    <ann chan="nam" head="1">40</ann>
+    <ann chan="nam_liv_person">0</ann>
+    <ann chan="nam_org_institution">0</ann>
+    <ann chan="nam_loc" head="1">1</ann>
+    <ann chan="nam_fac">0</ann>
+    <ann chan="nam_liv">0</ann>
+    <prop key="nam_loc:coord:1">16.1746744030377;51.20474605;administrative;Legnica, województwo dolnośląskie, Polska</prop>
+    <prop key="nam_loc_gpe_city:coord:1">16.1746744030377;51.20474605;administrative;Legnica, województwo dolnośląskie, Polska</prop>
+   </tok>
+  </sentence>
+ </chunk>
+</chunkList>
