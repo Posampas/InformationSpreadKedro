@@ -46,7 +46,7 @@ def create_pipeline(**kwargs) -> Pipeline:
             node(
                 func=join_user_text,
                 inputs="twitts_with_links_removed",
-                outputs="joined_time_line_text",
+                outputs="cleaned_data",
                 name="concatinate_user_timeline",
             ),
         ],

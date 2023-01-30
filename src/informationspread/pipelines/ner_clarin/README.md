@@ -1,4 +1,4 @@
-# Pipeline data_sience
+# Pipeline ner_clarin
 
 > *Note:* This is a `README.md` boilerplate generated using `Kedro 0.18.3`.
 

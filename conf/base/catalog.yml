@@ -42,8 +42,6 @@
 users:
   type: pandas.CSVDataSet
   filepath: data/01_raw/users.csv
-  # more about layers in the Data Engineering Convention:
-  # https://kedro.readthedocs.io/en/stable/tutorial/visualise_pipeline.html#interact-with-data-engineering-convention
   layer: raw
 main:
   type: pandas.CSVDataSet
@@ -52,7 +50,7 @@ main:
 
 twitts:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/twitts.csv
+  filepath: data/01_raw/main.csv
   layer: raw 
 
 joined_time_line_text:
@@ -68,4 +66,9 @@ words_with_geo_assosiaton:
 cleaned_data:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/cleaned_data.csv
+  layer: intermediate
+
+location:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/location.csv
   layer: intermediate
