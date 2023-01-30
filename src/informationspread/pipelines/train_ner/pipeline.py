@@ -1,7 +1,4 @@
-"""
-This is a boilerplate pipeline 'train_ner'
-generated using Kedro 0.18.3
-"""
+
 
 from kedro.pipeline import Pipeline, node, pipeline
 from .nodes import transform_data_to_spacy_format, train_spacey_model
@@ -22,6 +19,8 @@ def create_pipeline(**kwargs) -> Pipeline:
                 name="train_spacy_model_node",
             ),
         ],
+        namespace="train_custom_model",
         inputs=["train_data"],
-        outputs=None
+        outputs=None,
+        layer="intermediate"
     )
