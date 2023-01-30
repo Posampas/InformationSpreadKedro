@@ -32,7 +32,6 @@ def extract_words_with_geo_assosiation_and_convert_it_to_base_form(twitts: pd.Da
         transformed = filter(lambda x : x, transformed) # remove resposenes that are empty
         joined = ';'.join(transformed)
         twitts.at[i , 'text'] = joined
-
     return twitts
 
 def transform_place_names_to_geo_cordinates(twitts: pd.DataFrame) -> pd.DataFrame:

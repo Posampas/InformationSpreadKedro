@@ -72,3 +72,17 @@ location:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/location.csv
   layer: intermediate
+
+
+train_data:
+    type: json.JSONDataSet
+    filepath: data/01_raw/train_data.json
+
+spacy_config:
+    type: text.TextDataSet
+    filepath: data/01_raw/config.cfg
+
+custom_ner_model.custom_ner_result:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/custom_ner.csv
+  layer: model_output
