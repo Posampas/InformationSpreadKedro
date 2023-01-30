@@ -17,7 +17,7 @@ def create_pipeline(**kwargs) -> Pipeline:
             ),
         ]
         ,
-        namespace="ner",
+        namespace="ner_stanza",
         inputs="cleaned_data",
         outputs="locations",
     )

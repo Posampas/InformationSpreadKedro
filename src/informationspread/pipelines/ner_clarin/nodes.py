@@ -24,7 +24,7 @@ def extract_words_with_geo_assosiation_and_convert_it_to_base_form(twitts: pd.Da
     total_len = len(twitts)
     for i , row  in twitts.iterrows():
         print(i + 1 , "/", total_len, 'user_id',row['user_id'])
-        text = row['text'][:20000]
+        text = row['text']
         baseFromService = ClarinService(text, lmpn)
         response = baseFromService.run()
         parsers = list(map(lambda x: XmlParser(x), response))

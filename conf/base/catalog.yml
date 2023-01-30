@@ -86,3 +86,8 @@ custom_ner_model.custom_ner_result:
   type: pandas.CSVDataSet
   filepath: data/07_model_output/custom_ner.csv
   layer: model_output
+
+ner_clarin.clarin_ner:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/clarin_ner.csv
+  layer: model_output

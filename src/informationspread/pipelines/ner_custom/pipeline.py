@@ -14,7 +14,7 @@ def create_pipeline(**kwargs) -> Pipeline:
             func=recoginse_named_entity_in_text_using_custom_model,
             inputs="cleaned_data",
             outputs="custom_ner_result",
-            name="Recoginse named entity in text using custom model"
+            name="Recoginse_named_entity_in_text_using_custom_model"
             )
     ],
     namespace = "custom_ner_model",
