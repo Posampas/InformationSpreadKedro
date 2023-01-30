@@ -91,3 +91,8 @@ ner_clarin.clarin_ner:
   type: pandas.CSVDataSet
   filepath: data/07_model_output/clarin_ner.csv
   layer: model_output
+
+stanza_ner:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/stanza_ner.csv
+  layer: model_output 
