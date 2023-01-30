@@ -22,5 +22,4 @@ def create_pipeline(**kwargs) -> Pipeline:
         namespace="train_custom_model",
         inputs=["train_data"],
         outputs=None,
-        layer="intermediate"
     )
