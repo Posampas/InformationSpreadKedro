@@ -12,15 +12,18 @@ def transform_data_to_spacy_format(input_data):
     spacy_file_save_location ="./data/03_primary/train.spacy" 
     if os.path.exists(spacy_file_save_location):
         os.remove(spacy_file_save_location)
-    nlp = spacy.blank("pl")
+
     training_data = []
     for ann in input_data["annotations"]:
         training_data.append((ann[0], ann[1]['entities'] ))
+
+    nlp = spacy.blank("pl")
+
     db = DocBin()
-    for text, annotations in training_data:
+    for text, entites in training_data:
         doc = nlp(text)
         ents = []
-        for start, end, label in annotations:
+        for start, end, label in entites:
             span = doc.char_span(start, end, label=label)
             ents.append(span)
         doc.ents = ents

@@ -40,9 +40,6 @@ def join_user_text(twitts: pd.DataFrame) -> pd.DataFrame:
     text = []
     for user in unique_users:
         text.append(twitts[twitts["user_id"] == user]['text'].str.cat(sep='\n'))
-        
-
-
     return  pd.DataFrame({"user_id": unique_users, "text": text})
 
 
@@ -57,20 +54,21 @@ def remove_non_polish_tweets(twitts:pd.DataFrame)->pd.DataFrame:
     return twitts[twitts["lang"] == "pl"]
 
 def remove_regex_from_text(twitts:pd.DataFrame, regex_string : str ) -> pd.DataFrame:
-    """ from twitt text removes mentions in form @username 
+    """ from twitt text removes text that fits specidied regex_string 
     Args:
-        twitts: dataFrame of twitts 
+        twitts: dataFrame of tweets 
     Returns:
-        twitts : dataFrame where all the twitts text is cleansed from user mentions
+        twitts : dataFrame where all the tweets text is removed, if whole text fits the regex the row will be dropped
     """
     _throw_if_column_not_present("text",twitts)
 
-    if not regex_string or not isinstance(regex_string , str):
+    if  not isinstance(regex_string , str) or not regex_string :
         raise RuntimeError("Regex must be string and be parsable to regex")
     
     regrex_pattern = re.compile(pattern = regex_string, flags = re.UNICODE)
 
     twitts['text'] =  twitts['text'].str.replace(regrex_pattern, '').str.strip()
+    twitts =  drop_row_if_contaions_blank_string(twitts)
     return twitts
 
 def remove_non_ascii_chars(twitts:pd.DataFrame) -> pd.DataFrame:
@@ -78,11 +76,23 @@ def remove_non_ascii_chars(twitts:pd.DataFrame) -> pd.DataFrame:
     Args:
         twitts: dataFrame of twitts 
     Returns:
-        twitts : dataFrame where all the twitts text is cleansed from user mentions
+        twitts : dataFrame where all the twitts text is cleansed from non asci charaters  
     """ 
     _throw_if_column_not_present("text",twitts)
     twitts['text'] = twitts['text'].str.encode('ascii', 'ignore').str.decode('ascii').str.strip()
     return twitts
+
+
+def drop_row_if_contaions_blank_string(input_frame:pd.DataFrame):
+    """ 
+    Args:
+        twitts: dataFrame of tweets 
+    Returns:
+        twitts : dataFrame with rows droped where in column 'text' text is blank  
+    """ 
+    _throw_if_column_not_present("text",input_frame)
+    input_frame = input_frame[input_frame['text'].apply(lambda x : len(x) != 0 )]
+    return input_frame 
 
 
 
@@ -90,4 +100,4 @@ def _throw_if_column_not_present(column:str, twitts: pd.DataFrame) -> None:
     if (column not in twitts.columns.to_list()):
         raise RuntimeError("Column \"{}\" has to be present in the input frame".format(column)) 
     
-   
+

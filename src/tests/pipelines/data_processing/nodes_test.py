@@ -4,6 +4,7 @@ from src.informationspread.pipelines.data_processing.nodes import join_user_text
 from src.informationspread.pipelines.data_processing.nodes import remove_non_polish_tweets
 from src.informationspread.pipelines.data_processing.nodes import remove_regex_from_text
 from src.informationspread.pipelines.data_processing.nodes import remove_non_ascii_chars
+from src.informationspread.pipelines.data_processing.nodes import drop_na_text 
 import pandas as pd
 
 from .test_strings import text1
@@ -14,6 +15,16 @@ from unittest import mock
 test_frame = pd.DataFrame({id: ["1", "2", "3", "4"], "text": [
                           "RT text", "text", "text", "RT text"]})
 
+
+class TestDropRowsWithEmptyText(unittest.TestCase):
+    def test_can_inport(self):
+        func = drop_na_text
+        self.assertIsNotNone(func) 
+
+    def test_should_remove_empy_row(self):
+        input_frame = pd.DataFrame({"text" : [None,"text"]})
+        result = drop_na_text(input_frame)
+        self.assertEqual(len(result), 1)
 
 class TestRemoveRetwittsNode(unittest.TestCase):
     def test_can_import(self):
@@ -117,6 +128,7 @@ class TestRemoveNonPolishTwitts(unittest.TestCase):
 
 
 class TestRemoveReqexNode(unittest.TestCase):
+
     def test_should_import(self):
         function = remove_regex_from_text
         self.assertIsNotNone(function)
@@ -140,6 +152,14 @@ class TestRemoveReqexNode(unittest.TestCase):
             {"text": ["@username1 @username2 " + text + " @usernam_e"]})
         result = remove_regex_from_text(input_frame, "@[A-Za-z0-9_]+")
         self.assertEqual(result['text'].iloc[0], text)
+        
+    def test_should_drop_row_if_regex_matche_all_text(self):
+        input_frame = pd.DataFrame(
+            {"text": ["@username1 @username2","text"]})
+
+        result = remove_regex_from_text(input_frame, "@[A-Za-z0-9_]+")
+        print(result)
+        self.assertEqual(1, len(result))
 
     def test_should_remove_links_form_text(self):
         regex = 'https://t.co/[A-Za-z0-9]+'
